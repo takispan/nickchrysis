@@ -2,15 +2,24 @@
   "name": "nickchrysis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "npm-run-all -p dev:*",
+    "build": "npm-run-all -s build:*",
+    "dev:11ty": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
+    "dev:css": "tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -w",
+    "build:11ty": "cross-env ELEVENTY_ENV=PROD eleventy",
+    "build:css": "tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -m"
   },
   "keywords": [],
-  "author": "",
+  "author": "nakamas",
   "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1"
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-embed-everything": "^1.19.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.10"
   }
 }

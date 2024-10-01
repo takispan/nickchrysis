@@ -1,0 +1,24 @@
+---
+layout: base.njk
+permalink: /music/
+eleventyNavigation:
+  order: 20
+  key: Music
+---
+<div class="flex flex-col md:grid md:grid-cols-2 gap-5">
+  {% for artist in spotify.artists %}
+    <h2 class="mt-5 col-span-2">{{ artist.name }}</h2>
+    {% for song in artist.songs %}
+      <iframe
+        style="border-radius:12px"
+        src="{{ song.url }}?utm_source=generator"
+        width="100%"
+        height="{{ spotify.embed.height }}"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    {% endfor %}
+  {% endfor %}
+</div>

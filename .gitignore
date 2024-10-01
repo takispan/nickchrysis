@@ -1,1 +1,15 @@
-node_modules/**
+# dependencies installed by npm
+node_modules
+
+# build artifacts
+dist
+
+# secrets and errors
+.env
+.log
+
+# macOS related files
+.DS_Store
+
+# cache
+.cache
