@@ -5,4 +5,52 @@ eleventyNavigation:
   order: 30
   key: Services
 ---
-This is our services.
+<div class="my-8">
+  {# <div class="flex-none md:flex-1">
+    {% image "src/assets/images/studio.jpg", "Studio" %}
+  </div> #}
+  <h2>Recording / Mixing and Mastering</h2>
+  <p class="mt-5"> I will record your music on location, mix and master your projects and provide you with a polished end result!</p>
+  <div class="flex flex-col md:grid md:grid-cols-2 gap-5 mt-5">
+    {% for video in embed.youtube.services %}
+      {# <h2 class="mt-5">{{ video.title }}</h2> #}
+      <iframe
+        width="100%"
+        height="{{ embed.youtube.iframe_height }}"
+        src="{{ video.url }}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    {% endfor %}
+  </div>
+  <h2 class="mt-5">Sound Design</h2>
+  <p class="mt-5">Sound Design is essential to create an immersive experience for the audience. Enhance the auditory landscape of your videos and amplify the impact of your vision with audio.
+</p>
+  <p class="text-base mt-5">Created in Fine Tune Audio</p>
+  <div class="flex flex-col md:grid md:grid-cols-3 gap-5 mt-5">
+    <iframe
+      width="100%"
+      height="{{ embed.youtube.iframe_height }}"
+      src="https://www.youtube.com/embed/2-cTN8IQR2s?si=0w8n7acDnAVwvTgA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    {# tailwind h-[custom-height] not working? #}
+    <div class="w-full h-[{{ embed.youtube.iframe_height }}px] bg-[#6c8a47]" style="height: {{ embed.youtube.iframe_height }}px">
+      <a class="w-full h-full flex justify-center items-center" href="https://www.birdeyes.org/nl/" target="_blank">
+        {% include "src/_includes/svg/birdeyes.svg" %}
+      </a>
+    </div>
+    <div class="w-full h-[{{ embed.youtube.iframe_height }}px] bg-[#f6d8fc]" style="height: {{ embed.youtube.iframe_height }}px">
+      <a class="w-full h-full flex justify-center items-center" href="https://hegg.energy/over-ons/" target="_blank">
+        {% include "src/_includes/svg/hegg.svg" %}
+      </a>
+    </div>
+  </div>
+</div>

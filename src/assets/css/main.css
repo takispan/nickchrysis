@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --header-height: 56px;
-  --footer-height: 24px;
+  --header-height: 52px;
+  --footer-height: 241.833px;
 }
 
 /* css reset */
@@ -31,17 +31,24 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-
 html {
   scroll-behavior: smooth;
 }
 
+/* page & menu height */
 main {
   min-height: 100vh;
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  align-content: center;
+}
+
+#main-menu {
+  max-height: calc(100vh - var(--header-height));
 }
 
 @layer base {
+
+  /* fonts */
   @font-face {
     font-family: Montserrat;
     src: url('/src/assets/fonts/Montserrat-Regular.ttf') format('ttf');
@@ -57,16 +64,41 @@ main {
     font-display: swap;
   }
 
+  /* typography */
   h1 {
-    @apply text-6xl;
+    @apply text-5xl text-6xl;
   }
   h2 {
-    @apply text-5xl;
+    @apply text-4xl md:text-5xl;
   }
   h3 {
-    @apply text-4xl;
+    @apply text-3xl text-4xl;
   }
   p {
-    @apply text-lg;
+    @apply text-2xl;
+  }
+
+  /* colors */
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply text-light;
+  }
+
+  #header, #main-menu {
+    @apply bg-primary md:bg-dark;
+  }
+  #header .logo {
+    @apply hover:no-underline
+  }
+  #header a {
+    @apply text-dark md:text-primary
+  }
+  #header a[aria-current] {
+    @apply text-secondary
+  }
+  a {
+    @apply text-primary hover:text-light hover:underline;
+  }
+  .animated {
+    @apply hover:no-underline text-primary hover:text-dark ease-in-out duration-300 before:ease-in-out before:duration-300 relative before:absolute before:h-0 before:w-[104%] before:-left-[2%] before:bottom-0 before:-z-10 before:bg-primary before:hover:h-full;
   }
 }

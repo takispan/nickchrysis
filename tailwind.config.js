@@ -4,6 +4,9 @@ module.exports = {
     './src/**/*.njk',
     './src/**/*.svg'
   ],
+  safelist: [
+    'overflow-hidden',
+  ],
   theme: {
     extend: {},
     container: {
@@ -14,11 +17,10 @@ module.exports = {
       'sans': ['Montserrat', 'sans-serif']
     },
     colors: {
-      light: '#fff',
-      dark: '#000',
-      primary: '#533483',
-      secondary: '#E94560',
-      teriary: 'gray'
+      light: '#ECEFF1',
+      dark: '#141314',
+      primary: '#82B1FF',
+      secondary: '#EDE7F6',
     }
   },
   plugins: [],

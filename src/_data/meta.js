@@ -5,7 +5,11 @@ module.exports = {
   siteName: 'Nick Chrysis',
   siteDescription: '',
   socials: {
-    spotify: 'Spotify',
+    spotify: 'https://open.spotify.com/artist/3osiMoqYBRTo27au6ylL6q',
     instagram: 'Instagram',
+  },
+  contact: {
+    phone: '+39 123 4567',
+    email: 'contact@nickchrysis.com'
   }
 };

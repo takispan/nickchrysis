@@ -1,7 +1,7 @@
 <nav id="nav">
   <button
     id="toggle-menu"
-    class="group/toggle peer/toggle flex md:hidden items-center text-primary hover:text-secondary cursor-pointer sm:ml-6 p-4 focus:-outline-offset-8"
+    class="group/toggle peer/toggle flex md:hidden items-center cursor-pointer sm:ml-6 p-4 focus:-outline-offset-8"
     type="button"
     aria-controls="main-menu"
     aria-expanded="false"
@@ -15,9 +15,9 @@
       <span class="ml-1">Close</span>
     </span>
   </button>
-  <ul id="main-menu" class="max-md:invisible max-md:h-screen max-md:w-screen max-md:right-0 max-md:absolute max-md:overflow-y-auto max-md:p-5 bg-light transition-all ease-in-out delay-150 duration-700 translate-x-full peer-aria-expanded/toggle:translate-x-0 peer-aria-expanded/toggle:visible md:transform-none md:flex">
+  <ul id="main-menu" class="max-md:invisible max-md:h-screen max-md:w-screen max-md:right-0 max-md:absolute max-md:overflow-y-auto max-md:p-5 content-center transition-all ease-in-out delay-150 duration-700 translate-x-full peer-aria-expanded/toggle:translate-x-0 peer-aria-expanded/toggle:visible md:transform-none md:flex">
     {% for navItem in collections.all | eleventyNavigation %}
-      <li class="flex max-md:flex-col relative {% if navItem.children.length > 0 %}group/parent{% endif %}">
+      <li class="flex max-md:flex-col relative items-center {% if navItem.children.length > 0 %}group/parent{% endif %}">
         <a
           href="{{ navItem.url | url }}"
           class="max-md:w-max md:inline-block md:mt-0 font-medium text-lg px-3 py-2 md:py-3 aria-[current=page]:text-secondary hover:text-secondary focus:text-secondary focus:-outline-offset-4"
@@ -34,8 +34,7 @@
             <span class="transition-all ease-in-out delay-300 duration-300 group-hover/parent:rotate-180 group-aria-expanded/toggleSub:rotate-180">{% include "../svg/arrow.svg" %}</span>
           </button>
           <div id="{{ navItem.title | replace(' ', '-') | lower }}-submenu" class="relative md:absolute md:top-10 md:invisible md:group-hover/parent:visible md:hover:visible peer-aria-expanded:visible">
-            {# <div class="left-10 absolute top-0 transform -translate-x-1/2 translate-y-1/2 -rotate-[135deg] w-3 h-3 bg-light shadow-md -z-10"></div> #}
-            <ul class="pl-5 md:pl-0 md:bg-light md:shadow-md min-w-max delay-300 ease-in-out">
+            <ul class="pl-5 md:pl-0 min-w-max delay-300 ease-in-out">
               {% for navChild in navItem.children %}
                 <li>
                   <a
