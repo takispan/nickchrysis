@@ -27,6 +27,14 @@ module.exports = {
         name: 'Nick Chrysis',
         songs: [
           {
+            title: 'Boom',
+            url: 'https://open.spotify.com/embed/track/1nxg8ubLiq33whsS5ZS1MY'
+          },
+          {
+            title: 'Descend',
+            url: 'https://open.spotify.com/embed/track/1WcGRZjbGQ2Ae3X3cmtbE5'
+          },
+          {
             title: 'Velvet Haze',
             url: 'https://open.spotify.com/embed/track/7dhxmY4LFXbOrqTkDta528'
           },
@@ -41,7 +49,8 @@ module.exports = {
           {
             title: 'Buzzing',
             url: 'https://open.spotify.com/embed/track/2vvaCc6Ax9cyNJ4sRHi8L3'
-          }
+          },
+          
         ]
       },
       {

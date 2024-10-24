@@ -6,10 +6,12 @@ module.exports = {
   siteDescription: '',
   socials: {
     spotify: 'https://open.spotify.com/artist/3osiMoqYBRTo27au6ylL6q',
-    instagram: 'Instagram',
+    apple_music: 'https://music.apple.com/us/artist/nick-chrysis/1570515212',
+    instagram: 'https://www.instagram.com/nick.chrysis/',
+    facebook: 'https://www.facebook.com/profile.php?id=598205428'
   },
   contact: {
-    phone: '+39 123 4567',
+    phone: '+31 6 45333604',
     email: 'contact@nickchrysis.com'
   }
 };

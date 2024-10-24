@@ -20,12 +20,12 @@
       <li class="flex max-md:flex-col relative items-center {% if navItem.children.length > 0 %}group/parent{% endif %}">
         <a
           href="{{ navItem.url | url }}"
-          class="max-md:w-max md:inline-block md:mt-0 font-medium text-lg px-3 py-2 md:py-3 aria-[current=page]:text-secondary hover:text-secondary focus:text-secondary focus:-outline-offset-4"
+          class="max-md:w-max md:inline-block md:mt-0 font-medium text-lg px-3 py-2 md:py-3 aria-[current=page]:text-light hover:text-light focus:text-light focus:-outline-offset-4"
           {% if navItem.url == page.url %}aria-current="page"{% endif %}
         >{{ navItem.title }}</a>
         {% if navItem.children | length > 0 %}
           <button
-            class="group/toggleSub peer toggle-submenu hidden md:flex items-center group-hover/parent:text-secondary focus:text-secondary py-3 pl-1 pr-2 min-h-[48px] focus:-outline-offset-2"
+            class="group/toggleSub peer toggle-submenu hidden md:flex items-center group-hover/parent:text-light focus:text-light py-3 pl-1 pr-2 min-h-[48px] focus:-outline-offset-2"
             type="button"
             aria-controls="{{ navItem.title | replace(' ', '-') | lower }}-submenu"
             aria-expanded="false"
@@ -39,7 +39,7 @@
                 <li>
                   <a
                     href="{{ navChild.url | url }}"
-                    class="max-md:w-max flex md:mt-0 font-medium hover:text-secondary aria-[current=page]:text-secondary focus:text-secondary text-base px-3 py-2 md:py-3 focus:-outline-offset-4"
+                    class="max-md:w-max flex md:mt-0 font-medium hover:text-light aria-[current=page]:text-light focus:text-light text-base px-3 py-2 md:py-3 focus:-outline-offset-4"
                     {% if navChild.url == page.url %}aria-current="page"{% endif %}
                   >{{ navChild.title }}</a>
                 </li>

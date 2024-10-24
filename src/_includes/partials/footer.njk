@@ -5,14 +5,10 @@
         <h2>Get in touch</h2>
         <ul>
           <li>
-            <a class="animated text-2xl" href="tel:{{meta.contact.phone}}">
-              {{meta.contact.phone}}
-            </a>
+            <a class="animated text-2xl" href="tel:{{meta.contact.phone}}">{{meta.contact.phone}}</a>
           </li>
           <li>
-            <a class="animated text-2xl" href="mailto:{{meta.contact.email}}">
-              {{meta.contact.email}}
-            </a>
+            <a class="animated text-2xl" href="mailto:{{meta.contact.email}}">{{meta.contact.email}}</a>
           </li>
         </ul>
       </div>
@@ -21,11 +17,11 @@
         <ul>
           {% for name, link in meta.socials %}
             <li>
-              <a href="{{link}}" target="_blank" class="text-lg flex content-center">
+              <a href="{{link}}" target="_blank" class="text-lg inline-flex content-center leading-6">
                 <span class="inline-block mr-1">
                   {% include "../svg/" + name + ".svg" %}
                 </span>
-                {{ name | capitalize }}
+                {{ name | capitalize | replace('_', ' ') }}
               </a>
             </li>
           {% endfor %}

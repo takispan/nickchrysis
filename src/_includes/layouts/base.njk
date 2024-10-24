@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="max-md:overflow-x-hidden">
   {% include "partials/head.njk" %}
   <body class="bg-dark overflow-x-hidden">
     {% include 'partials/header.njk' %}
     <main class="container mx-auto">
-      {# {% include 'partials/breadcrumbs.njk' %} #}
       {{ content | safe }}
     </main>
     {% include 'partials/footer.njk' %}
